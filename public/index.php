@@ -16,7 +16,14 @@
 
 <div class="app">
     <?php
-        require_once __DIR__.'/screens/dashboard/main.php';
+
+        $LoggedIn = false;
+
+        if($LoggedIn)
+            require_once __DIR__.'/screens/dashboard/main.php';
+        else
+            require_once __DIR__.'/screens/login.php';
+
     ?>
 </div>
 
