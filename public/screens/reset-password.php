@@ -23,13 +23,6 @@
                 <input class="form-input" type="password" id="password_confirmation" name="password_confirmation" placeholder="Repita sua senha" autocomplete="new-password" minlength="8" required>
             </div>
 
-            <div class="form-row">
-                <label class="form-check" for="terms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <span>Li e aceito os termos de uso</span>
-                </label>
-            </div>
-
             <button class="btn-primary" type="submit">Criar conta</button>
         </form>
 
