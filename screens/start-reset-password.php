@@ -1,10 +1,10 @@
-<section class="auth-shell">
+<section class="page-shell">
 
-    <div class="auth-card">
+    <div class="page-card">
 
-        <h1 class="auth-title">Reset password</h1>
+        <h1 class="page-title">Reset password</h1>
 
-        <p class="auth-description">Preencha seus dados to reset password.</p>
+        <p class="page-description">Preencha seus dados to reset password.</p>
 
         <form class="form-grid" method="post" action="">
 
@@ -16,7 +16,7 @@
             <button class="btn-primary" type="submit">Reset password</button>
         </form>
 
-        <div class="auth-footer">
+        <div class="page-footer">
             Já tem uma conta? <a href="<?php echo "/";?>">Entrar</a>
         </div>
 
