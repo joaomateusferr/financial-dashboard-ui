@@ -18,22 +18,27 @@
 
     <?php
 
-        $Action = isset($_GET['action']) ? $_GET['action'] : '';
+        $Page = isset($_GET['page']) ? $_GET['page'] : '';
 
         $LoggedIn = false;
 
-        if($LoggedIn)
+        if($LoggedIn){
             require_once __DIR__.'/../screens/dashboard/main.php';
-        elseif($Action == 'signin')
-            require_once __DIR__.'/../screens/signin.php';
-        elseif($Action == 'start-reset-password')
-            require_once __DIR__.'/screens/start-reset-password.php';
-        elseif($Action == 'reset-password')
-            require_once __DIR__.'/../screens/reset-password.php';
-        else
+        }elseif(empty($Page)){
             require_once __DIR__.'/../screens/login.php';
+        } else {
+
+            $PagePath = __DIR__."/../screens/$Page.php";
+
+            if(file_exists($PagePath))
+                require_once $PagePath;
+            else
+                require_once __DIR__.'/../screens/page-not-found.php';
+
+        }
 
     ?>
+
 </div>
 
 <script>

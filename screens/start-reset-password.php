@@ -17,7 +17,7 @@
         </form>
 
         <div class="auth-footer">
-            Já tem uma conta? <a href="<?php echo $_SERVER['PHP_SELF'];?>">Entrar</a>
+            Já tem uma conta? <a href="<?php echo "/";?>">Entrar</a>
         </div>
 
     </div>
