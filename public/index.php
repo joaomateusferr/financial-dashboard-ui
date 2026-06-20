@@ -23,15 +23,15 @@
         $LoggedIn = false;
 
         if($LoggedIn)
-            require_once __DIR__.'/screens/dashboard/main.php';
+            require_once __DIR__.'/../screens/dashboard/main.php';
         elseif($Action == 'signin')
-            require_once __DIR__.'/screens/signin.php';
+            require_once __DIR__.'/../screens/signin.php';
         elseif($Action == 'start-reset-password')
             require_once __DIR__.'/screens/start-reset-password.php';
         elseif($Action == 'reset-password')
-            require_once __DIR__.'/screens/reset-password.php';
+            require_once __DIR__.'/../screens/reset-password.php';
         else
-            require_once __DIR__.'/screens/login.php';
+            require_once __DIR__.'/../screens/login.php';
 
     ?>
 </div>
