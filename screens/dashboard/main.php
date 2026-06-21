@@ -13,7 +13,7 @@
     <div class="options-list">
 
         <div class="options-item active">
-            <span>Indicadores</span>
+            <a href="<?php echo "/?tab=indicators";?>">Indicators</a>
         </div>
 
         <div class="options-item">
