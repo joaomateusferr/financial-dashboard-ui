@@ -23,17 +23,17 @@
         $LoggedIn = false;
 
         if($LoggedIn){
-            require_once __DIR__.'/../screens/dashboard/main.php';
+            require_once dirname(__DIR__, 1).'/screens/dashboard/main.php';
         }elseif(empty($Page)){
-            require_once __DIR__.'/../screens/login.php';
+            require_once dirname(__DIR__, 1).'/screens/login.php';
         } else {
 
-            $PagePath = __DIR__."/../screens/$Page.php";
+            $PagePath = dirname(__DIR__, 1)."/screens/$Page.php";
 
             if(file_exists($PagePath))
                 require_once $PagePath;
             else
-                require_once __DIR__.'/../screens/page-not-found.php';
+                require_once dirname(__DIR__, 1).'/screens/page-not-found.php';
 
         }
 
