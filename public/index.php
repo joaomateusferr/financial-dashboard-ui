@@ -1,3 +1,9 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +26,7 @@
 
         $Page = isset($_GET['page']) ? $_GET['page'] : '';
 
-        $LoggedIn = false;
+        $LoggedIn = true;
 
         if($LoggedIn){
             require_once dirname(__DIR__, 1).'/screens/dashboard/main.php';
