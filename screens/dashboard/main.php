@@ -1,3 +1,12 @@
+<?php
+
+    use App\Constants\DashboardTabsConstants;
+
+    $DashboardTabsConstants = DashboardTabsConstants::getDashboardTabs();
+    $GetTab = isset($_GET['tab']) ? $_GET['tab'] : array_key_first($DashboardTabsConstants);
+
+?>
+
 <aside class="sidebar">
 
     <div class="sidebar-header">
@@ -12,13 +21,20 @@
 
     <div class="options-list">
 
-        <div class="options-item active">
-            <a href="<?php echo "/?tab=indicators";?>">Indicators</a>
-        </div>
+        <?php
 
-        <div class="options-item">
-            <span>Ativos</span>
-        </div>
+            foreach($DashboardTabsConstants as $Tab => $TabName){
+
+                ?>
+                    <div class="options-item <?php echo $Tab == $GetTab ? 'active' : '';?>" onclick="window.location.href='<?php echo "/?tab=$Tab";?>'">
+                        <span><?php echo $TabName; ?></span>
+                    </div>
+
+                <?php
+
+            }
+
+        ?>
 
     </div>
 
@@ -31,7 +47,7 @@
 <main class="main">
 
     <div class="option-header">
-        Indicadores
+        <?php echo $DashboardTabsConstants[$GetTab];?>
     </div>
 
     <div class="option">
