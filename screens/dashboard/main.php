@@ -47,11 +47,19 @@
 <main class="main">
 
     <div class="option-header">
-        <?php echo $DashboardTabsConstants[$GetTab];?>
+        <h1 class="page-title"><?php echo $DashboardTabsConstants[$GetTab];?></h1>
     </div>
 
     <div class="option">
-        Option
+        <?php
+
+            $PagePath = dirname(__FILE__)."/$GetTab.php";
+
+            if(file_exists($PagePath))
+                require_once $PagePath;
+            else
+                require_once dirname(__FILE__).'/page-not-found.php';
+        ?>
     </div>
 
 </main>
