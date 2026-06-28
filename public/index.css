@@ -172,6 +172,20 @@ body {
     gap: 14px;
 }
 
+.form-alert {
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, #dc3545 28%, var(--border-color));
+    background: color-mix(in srgb, #dc3545 8%, var(--sidebar-bg));
+    color: color-mix(in srgb, #dc3545 82%, var(--text-color));
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.form-alert[hidden] {
+    display: none;
+}
+
 .form-field {
     display: grid;
     gap: 7px;

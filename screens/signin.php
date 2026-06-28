@@ -6,6 +6,9 @@
 
         <p class="page-description">Preencha seus dados para começar a usar o painel.</p>
 
+        <div class="form-alert" id="form-alert" role="alert" aria-live="polite" hidden>
+        </div>
+
         <form class="form-grid" method="post" action="">
 
             <div class="form-field">
