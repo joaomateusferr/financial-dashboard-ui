@@ -1,10 +1,10 @@
-<section class="auth-shell">
+<section class="page-shell">
 
-    <div class="auth-card">
+    <div class="page-card">
 
-        <h1 class="auth-title">Entrar na sua conta</h1>
+        <h1 class="page-title">Entrar na sua conta</h1>
 
-        <p class="auth-description">Continue de onde parou...</p>
+        <p class="page-description">Continue de onde parou...</p>
 
         <form class="form-grid" method="post" action="">
 
@@ -24,15 +24,15 @@
                     <span>Lembrar-me</span>
                 </label>
 
-                <a class="form-link" href="#">Esqueci minha senha</a>
+                <a class="form-link" href="<?php echo "/?page=start-reset-password";?>">Esqueci minha senha</a>
 
             </div>
 
             <button class="btn-primary" type="submit">Entrar</button>
         </form>
 
-        <div class="auth-footer">
-            Não tem uma conta? <a href="#">Criar conta</a>
+        <div class="page-footer">
+            Não tem uma conta? <a href="<?php echo "/?page=signin";?>">Criar conta</a>
         </div>
 
     </div>

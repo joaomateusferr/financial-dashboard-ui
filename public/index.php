@@ -1,3 +1,9 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,16 +21,30 @@
 <body>
 
 <div class="app">
+
     <?php
 
-        $LoggedIn = false;
+        $Page = isset($_GET['page']) ? $_GET['page'] : '';
 
-        if($LoggedIn)
-            require_once __DIR__.'/screens/dashboard/main.php';
-        else
-            require_once __DIR__.'/screens/login.php';
+        $LoggedIn = true;
+
+        if($LoggedIn){
+            require_once dirname(__DIR__, 1).'/screens/dashboard/main.php';
+        }elseif(empty($Page)){
+            require_once dirname(__DIR__, 1).'/screens/login.php';
+        } else {
+
+            $PagePath = dirname(__DIR__, 1)."/screens/$Page.php";
+
+            if(file_exists($PagePath))
+                require_once $PagePath;
+            else
+                require_once dirname(__DIR__, 1).'/screens/page-not-found.php';
+
+        }
 
     ?>
+
 </div>
 
 <script>

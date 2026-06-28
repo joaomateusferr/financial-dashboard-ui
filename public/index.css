@@ -48,6 +48,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     overflow: hidden;
     background: var(--bg-color);
@@ -134,7 +139,7 @@ body {
     padding: 30px;
 }
 
-.auth-shell {
+.page-shell {
     flex: 1;
     display: flex;
     align-items: center;
@@ -142,21 +147,21 @@ body {
     padding: 24px;
 }
 
-.auth-card {
+.page-card {
     width: min(100%, 380px);
     display: grid;
     gap: 18px;
     padding: 8px 0;
 }
 
-.auth-title {
+.page-title {
     margin: 0;
     font-size: 1.6rem;
     line-height: 1.15;
     color: var(--text-color);
 }
 
-.auth-description {
+.page-description {
     margin: 0;
     color: color-mix(in srgb, var(--text-color) 66%, transparent);
     line-height: 1.55;
@@ -165,6 +170,20 @@ body {
 .form-grid {
     display: grid;
     gap: 14px;
+}
+
+.form-alert {
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, #dc3545 28%, var(--border-color));
+    background: color-mix(in srgb, #dc3545 8%, var(--sidebar-bg));
+    color: color-mix(in srgb, #dc3545 82%, var(--text-color));
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.form-alert[hidden] {
+    display: none;
 }
 
 .form-field {
@@ -274,18 +293,18 @@ body {
     background: var(--hover-bg);
 }
 
-.auth-footer {
+.page-footer {
     font-size: 0.88rem;
     color: color-mix(in srgb, var(--text-color) 66%, transparent);
 }
 
-.auth-footer a {
+.page-footer a {
     color: color-mix(in srgb, var(--text-color) 82%, transparent);
     font-weight: 600;
     text-decoration: none;
 }
 
-.auth-footer a:hover {
+.page-footer a:hover {
     color: var(--text-color);
     text-decoration: underline;
 }
