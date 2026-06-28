@@ -1,10 +1,24 @@
 <?php
 
+    function renderIndicatorBadge(string $indicatorType, string $indicatorName): array
+    {
+        $hash = crc32($indicatorType . '|' . $indicatorName);
+        $isGain = ($hash % 2) === 0;
+        $percentage = number_format((($hash % 1250) / 100) + 0.5, 2, ',', '.');
+
+        return [
+            'class' => $isGain ? 'text-bg-success' : 'text-bg-danger',
+            'icon' => $isGain ? '▲' : '▼',
+            'label' => ($isGain ? '+' : '-') . $percentage . '%',
+        ];
+    }
+
     $Indicators = [
         'Brazilian fixed income' => [
             'CDI' => '14.15%',
             'Selic' => '14.25%',
             'IPCA' => '4.75%',
+            'IPCA15' => '4.75%',
         ],
         'Cryptocurrencies' => [
             'Bitcoin-Dollars' => '$60,000.00',
@@ -33,6 +47,7 @@
 
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <?php foreach ($IndicatorItems as $IndicatorName => $IndicatorValue) { ?>
+                        <?php $Badge = renderIndicatorBadge($IndicatorType, $IndicatorName); ?>
                         <div class="col">
                             <div class="card h-100 shadow-sm border-0">
                                 <div class="card-body p-4 d-flex flex-column gap-3">
@@ -46,8 +61,8 @@
                                             </h2>
                                         </div>
 
-                                        <span class="badge text-bg-secondary rounded-pill flex-shrink-0">
-                                            <?php echo htmlspecialchars($IndicatorType, ENT_QUOTES, 'UTF-8'); ?>
+                                        <span class="badge <?php echo htmlspecialchars($Badge['class'], ENT_QUOTES, 'UTF-8'); ?> rounded-pill flex-shrink-0">
+                                            <?php echo htmlspecialchars($Badge['icon'] . ' ' . $Badge['label'], ENT_QUOTES, 'UTF-8'); ?>
                                         </span>
                                     </div>
 
