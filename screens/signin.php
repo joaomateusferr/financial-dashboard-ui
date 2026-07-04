@@ -9,7 +9,7 @@
         <div class="form-alert" id="form-alert" role="alert" aria-live="polite" hidden>
         </div>
 
-        <form class="form-grid" method="post" action="">
+        <form class="form-grid" method="post" action="" novalidate>
 
             <div class="form-field">
                 <label class="form-label" for="email">E-mail</label>
@@ -43,3 +43,29 @@
     </div>
 
 </section>
+
+<script src="/js/signin.js" defer></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const Form = document.querySelector('.form-grid');
+        const AlertBox = document.getElementById('form-alert');
+
+        Form.addEventListener('submit', (Event) => {
+
+            const IsValid = FormValidator.validateForm(Form, AlertBox);
+
+            if (!IsValid) {
+
+                Event.preventDefault();
+                return;
+
+            }
+
+        });
+
+    });
+
+</script>

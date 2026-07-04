@@ -26,7 +26,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
         $Page = isset($_GET['page']) ? $_GET['page'] : '';
 
-        $LoggedIn = true;
+        $LoggedIn = false;
 
         if($LoggedIn){
             require_once dirname(__DIR__, 1).'/screens/dashboard/main.php';
