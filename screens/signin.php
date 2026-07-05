@@ -13,17 +13,22 @@
 
             <div class="form-field">
                 <label class="form-label" for="email">E-mail</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="seuemail@empresa.com" autocomplete="email" required>
+                <input class="form-input" type="email" id="email" name="email" placeholder="user@domain.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="email_confirmation">Confirmar e-mail</label>
+                <input class="form-input" type="email" id="email_confirmation" name="email_confirmation" placeholder="user@domain.com" autocomplete="email" required>
             </div>
 
             <div class="form-field">
                 <label class="form-label" for="password">Senha</label>
-                <input class="form-input" type="password" id="password" name="password" placeholder="Crie uma senha" autocomplete="new-password" minlength="8" required>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" minlength="8" maxlength="50" required>
             </div>
 
             <div class="form-field">
                 <label class="form-label" for="password_confirmation">Confirmar senha</label>
-                <input class="form-input" type="password" id="password_confirmation" name="password_confirmation" placeholder="Repita sua senha" autocomplete="new-password" minlength="8" required>
+                <input class="form-input" type="password" id="password_confirmation" name="password_confirmation" placeholder="Repeat your password" autocomplete="new-password" minlength="8" maxlength="50" required>
             </div>
 
             <div class="form-row">
