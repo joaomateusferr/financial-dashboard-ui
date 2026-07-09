@@ -6,7 +6,7 @@
 
         <p class="page-description">Preencha seus dados para começar a usar o painel.</p>
 
-        <form class="form-grid" method="post" action="">
+        <form class="form-grid" method="post">
 
             <div class="form-field">
                 <label class="form-label" for="email">E-mail</label>

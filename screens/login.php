@@ -6,7 +6,7 @@
 
         <p class="page-description">Continue de onde parou...</p>
 
-        <form class="form-grid" method="post" action="">
+        <form class="form-grid" method="post">
 
             <div class="form-field">
                 <label class="form-label" for="email">E-mail</label>
