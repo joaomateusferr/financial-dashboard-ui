@@ -1,3 +1,15 @@
+<?php
+
+if(!empty($_POST)){
+
+    $Success = true;
+    require_once dirname(__DIR__, 1)."/screens/signin-result.php";
+    exit;
+
+}
+
+?>
+
 <section class="page-shell">
 
     <div class="page-card">
@@ -9,7 +21,7 @@
         <div class="form-alert" id="form-alert" role="alert" aria-live="polite" hidden>
         </div>
 
-        <form class="form-grid" method="post" action="" novalidate>
+        <form class="form-grid" method="post" novalidate>
 
             <div class="form-field">
                 <label class="form-label" for="email">E-mail</label>
